@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION</title>
+    <link rel="icon" href="img/logo_of_vision4.png" style="border: 0.2px solid red;">
+    <style>
+        header {
+            background-color: rgba(255, 255, 255, 0.542);
+            height: 150px;
+            padding: 15px;
+        }
+
+        body {
+            background-color: aquamarine;
+        }
+
+
+        .left {
+            /* border: 2px solid red; */
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5px 10px;
+        }
+
+        .logo img {
+            padding: 3px 3px;
+            background-color: rgb(233, 54, 9);
+            border-radius: 60px;
+            width: 50px;
+        }
+
+        .forlogo {
+            font-size: 22px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+            /* border: 1px solid black; */
+            margin: 30px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.634);
+        }
+
+        .inline {
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+        }
+
+        .input {
+            width: 360px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.621);
+            border: 0.3px solid black;
+            border-radius: 3px;
+            height: 20px;
+        }
+
+        #textarea {
+            width: 360px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.621);
+            border: 0.3px solid black;
+            border-radius: 3px;
+        }
+
+        #age {
+            background: rgba(255, 255, 255, 0.621);
+            border: 0.3px solid black;
+            border-radius: 3px;
+            height: 20px;
+            width: 100px;
+        }
+
+        .bg {
+            background: rgba(255, 255, 255, 0.621);
+            border-radius: 3px;
+            border: 0.3px solid black;
+            height: 20px;
+            width: 100px;
+        }
+
+        #one {
+            margin: 10px 30px;
+        }
+
+        #two {
+            margin: 10px 30px;
+        }
+
+        .last {
+            padding-top: 15px;
+        }
+
+        @media screen and (max-width:570px) {
+            .form {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                width: 300px;
+                /* border: 1px solid black; */
+                margin: 30px auto;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.634);
+            }
+
+            .input {
+                width: 260px;
+                margin: 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 20px;
+            }
+
+            #textarea {
+                width: 260px;
+                margin: 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+            }
+
+            #age {
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 20px;
+                width: 100px;
+            }
+
+            .bg {
+                background: rgba(255, 255, 255, 0.621);
+                border-radius: 3px;
+                border: 0.3px solid black;
+                height: 20px;
+                width: 100px;
+            }
+
+            #one {
+                margin: 10px 25px;
+            }
+
+            #two {
+                margin: 10px 25px;
+            }
+
+            .last {
+                padding-top: 15px;
+            }
+        }
+
+        @media screen and (max-width:420px) {
+            .form {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                width: 260px;
+                /* border: 1px solid black; */
+                margin: 30px auto;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.634);
+            }
+
+            .input {
+                width: 230px;
+                margin: 6px 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 20px;
+            }
+
+            #textarea {
+                width: 230px;
+                margin: 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 100px;
+            }
+
+            #age {
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 20px;
+                width: 80px;
+            }
+
+            .bg {
+                background: rgba(255, 255, 255, 0.621);
+                border-radius: 3px;
+                border: 0.3px solid black;
+                height: 20px;
+                width: 80px;
+            }
+
+            #one {
+                margin: 5px 25px;
+            }
+
+            #two {
+                margin: 5px 25px;
+            }
+
+            .last {
+                padding-top: 15px;
+            }
+        }
+
+        @media screen and (max-width:335px) {
+            .form {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                width: 220px;
+                /* border: 1px solid black; */
+                margin: 30px auto;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.634);
+            }
+
+            .input {
+                width: 190px;
+                margin: 6px 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 20px;
+            }
+
+            #textarea {
+                width: 190px;
+                margin: 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 80px;
+            }
+
+            #age {
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 20px;
+                width: 70px;
+            }
+
+            .bg {
+                background: rgba(255, 255, 255, 0.621);
+                border-radius: 3px;
+                border: 0.3px solid black;
+                height: 20px;
+                width: 70px;
+            }
+
+            #one {
+                margin: 5px 20px;
+            }
+
+            #two {
+                margin: 5px 20px;
+            }
+
+            .last {
+                padding-top: 10px;
+            }
+        }
+
+        @media screen and (max-width:305px) {
+            .form {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                /* border: 1px solid black; */
+                margin: 30px auto;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.634);
+            }
+
+            .input {
+                width: 190px;
+                margin: 6px 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 17px;
+            }
+
+            #textarea {
+                width: 190px;
+                margin: 10px;
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 80px;
+            }
+
+            #age {
+                background: rgba(255, 255, 255, 0.621);
+                border: 0.3px solid black;
+                border-radius: 3px;
+                height: 20px;
+                width: 70px;
+            }
+
+            .bg {
+                background: rgba(255, 255, 255, 0.621);
+                border-radius: 3px;
+                border: 0.3px solid black;
+                height: 20px;
+                width: 70px;
+            }
+
+            #one {
+                margin: 5px 20px;
+            }
+
+            #two {
+                margin: 5px 20px;
+            }
+
+            .last {
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <li class="logo">
+                    <img src="img/logo_of_vision4.png" alt="logo">
+                </li>
+                <li class="forlogo">VISION</li>
+            </div>
+            <h1>
+                <center>Check, Take treatment, Cure</center>
+            </h1>
+        </nav>
+    </header>
+    <form action="" class="form">
+        <input type="text" id="name" class="input" placeholder="Enter your name" required>
+        <div class="inline">
+            <div id="one">
+                <select name="gender" class="bg" id="gender">
+                    <option value="none" selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+            <div id="two">
+                <input type="number" id="age" placeholder="Your age" required>
+            </div>
+        </div>
+        <input type="email" id="email" class="input" placeholder="Enter your E-mail" required>
+        <input type="tel" id="phone" class="input" name="phone" placeholder="Enter your phone no."  required>
+        <textarea name="" id="textarea" cols="30" rows="10" placeholder="Write about your problem..."></textarea>
+        <div class="last">
+            <input type="reset" >
+            <input type="submit" >
+        </div>
+    </form>
+</body>
+
+</html>

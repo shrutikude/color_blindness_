@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION</title>
+    <link rel="icon" href="img/logo_of_vision4.png" style="border: 0.2px solid red;">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter:wght@500&family=Lora:ital@1&family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.29);
+            color: white;
+        }
+
+        .logo_name {
+            color: aqua;
+            text-shadow: 1px 1px 30px aqua;
+        }
+
+        .only_hover {
+            color: black;
+            font-size: large;
+        }
+
+        .only_hover:hover {
+            color: chartreuse;
+            text-decoration: underline;
+            text-shadow: 1px 1px 10px blueviolet;
+        }
+
+        .left ul li img {
+            padding-top: 3px;
+            border-radius: 100%;
+            margin: 5px;
+            box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+        }
+
+        .left ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-content: space-around;
+        }
+
+        .right ul li {
+            padding: 0 20px;
+            font-family: 'Comic Neue', cursive;
+            list-style: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        .left ul li {
+            padding: 0 5px;
+            font-family: 'Pacifico', cursive;
+            list-style: none;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        nav a:visited {
+            color: white;
+        }
+
+        /* mouse over link */
+        nav a:hover {
+            color: chartreuse;
+        }
+
+        /* selected link */
+        nav a:active {
+            color: yellow;
+        }
+
+        body {
+            background-image: url(img/body_background.webp);
+            background-size: cover;
+            background-position: center;
+        }
+
+        footer {
+            background-color: rgba(137, 43, 226, 0.46);
+            height: 30px;
+            color: white;
+        }
+
+        footer:hover {
+            background-color: rgba(137, 43, 226, 0.46);
+            height: 30px;
+            color: aqua;
+        }
+
+        .forpadding {
+            padding: 5.5px;
+        }
+
+        main {
+            background-color: rgba(241, 240, 240, 0.723);
+        }
+
+        .about {
+            padding-left: 20px;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        .mainleftpadding a:visited {
+            color: blue;
+        }
+
+        /* mouse over link */
+        .mainleftpadding a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        /* selected link */
+        .mainleftpadding a:active {
+            color: yellow;
+        }
+
+        .contact li {
+            list-style: none;
+        }
+
+        .mainleft li {
+            margin: 20px auto;
+        }
+
+        .mainright li {
+            margin: 20px auto;
+        }
+
+        .mainleft {
+            font-size: 20px;
+            font-family: 'Comic Neue', cursive;
+            font-weight: 530;
+        }
+
+        .justify {
+            margin: auto 3px;
+        }
+
+        .contactlogo {
+            display: flex;
+        }
+
+        .contactlogo li:hover {
+            background-color: rgba(127, 255, 212, 0.44);
+            border-radius: 15px;
+            text-shadow: 1px 1px 0.8px red;
+        }
+
+        .aligncenter {
+            color: blue;
+            text-align: center;
+        }
+
+        strong {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        h1 {
+            padding: 5px 5px 5px 10px;
+        }
+
+        p {
+            padding: 5px 5px 5px 20px;
+            font-size: 20px;
+        }
+
+        .dot {
+            padding: 5px;
+            list-style: circle;
+            padding-left: 30px;
+            font-size: 20px;
+        }
+
+        .dot li {
+            padding: 3px;
+        }
+
+        .dots {
+            list-style: square;
+            padding: 5px;
+            padding-left: 30px;
+            font-size: 18px;
+        }
+
+        .aligncenter1 {
+            text-align: center;
+            color: blue;
+        }
+
+        .infimg {
+            width: 300px;
+            margin: 20px 40px 40px 50px;
+            box-shadow: 10px 10px 30px black;
+        }
+
+        .contactimg {
+            width: 300px;
+            border-radius: 18px;
+        }
+
+        .branches {
+            padding: 2px;
+        }
+
+        .button {
+            width: 100px;
+            padding: 1px 0 5px 0;
+            margin: 3px;
+            background-color: rgba(2, 116, 216, 0.949);
+            color: white;
+            border-radius: 5px;
+            font-size: 15px;
+            margin: 0 0 20px 0;
+            border: none;
+        }
+
+        .button:hover {
+            width: 100px;
+            padding: 1px 0 5px 0;
+            margin: 3px;
+            background-color: rgb(1, 179, 255);
+            color: white;
+            border-radius: 5px;
+            font-size: 15px;
+            margin: 0 0 20px 0;
+        }
+
+        .button img {
+            width: 16px;
+            padding: 4px 0 0 0;
+        }
+
+        .branches ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+
+        .bheading {
+            padding: 20px 0 30px 0;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        /* unvisited link */
+        .button a:link {
+            color: white;
+        }
+
+        /* visited link */
+        .button a:visited {
+            color: white;
+        }
+
+        /* mouse over link */
+        .button a:hover {
+            color: blueviolet;
+        }
+
+        /* selected link */
+        .button a:active {
+            color: blue;
+        }
+
+        strong {
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .punebranch {
+            text-align: center;
+            padding: 30px 0 40px 0;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: 'Libre Baskerville', serif;
+            text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+        }
+
+        .inf {
+            display: flex;
+        }
+
+        @media screen and (max-width : 1100px) {
+            .contactimg {
+                width: 250px;
+                border-radius: 18px;
+            }
+
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width : 935px) {
+            .contactimg {
+                width: 200px;
+                border-radius: 18px;
+            }
+
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 17px;
+            }
+
+            .mainleft {
+                font-size: 16px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 530;
+            }
+
+            h1 {
+                padding: 5px 5px 5px 10px;
+            }
+
+            p {
+                padding: 5px 5px 5px 20px;
+                font-size: 16px;
+            }
+
+            .dot {
+                font-size: 17px;
+            }
+
+            .dots {
+                font-size: 17px;
+            }
+
+            .infleft h1 {
+                font-size: 20px;
+            }
+
+            .infimg {
+                width: 280px;
+                margin: 20px 40px 40px 50px;
+                box-shadow: 10px 10px 30px black;
+            }
+        }
+
+        @media screen and (max-width : 825px) {
+            .contactimg {
+                width: 200px;
+                border-radius: 18px;
+            }
+
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 13px;
+            }
+
+            .mainleft {
+                font-size: 14px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 530;
+            }
+
+            .mainleftpadding {
+                font-size: 15px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 40px 0;
+                font-size: 30px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width : 750px) {
+            .contactimg {
+                width: 170px;
+                border-radius: 18px;
+            }
+
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 13px;
+            }
+
+            .mainleft {
+                font-size: 14px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 530;
+            }
+
+            .mainleftpadding {
+                font-size: 15px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 40px 0;
+                font-size: 30px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .infimg {
+                width: 230px;
+                margin: 20px 0px 20px 50px;
+                box-shadow: 10px 10px 30px black;
+            }
+        }
+
+        @media screen and (max-width : 670px) {
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 13px;
+            }
+
+            .mainleft {
+                font-size: 14px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 530;
+            }
+
+            .mainleftpadding {
+                font-size: 15px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 40px 0;
+                font-size: 30px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .infimg {
+                width: 200px;
+                margin: 20px 0px 10px 40px;
+                box-shadow: 10px 10px 30px black;
+            }
+
+            .contactimg {
+                display: none;
+            }
+
+            .doctername {
+                display: none;
+            }
+
+            .button {
+                width: 80px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgba(2, 116, 216, 0.949);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 0 20px 0;
+                border: none;
+            }
+
+            .button:hover {
+                width: 80px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgb(1, 179, 255);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 0 20px 0;
+            }
+
+            .button img {
+                width: 12px;
+                padding: 4px 0 0 0;
+            }
+        }
+
+        @media screen and (max-width : 550px) {
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 12px;
+            }
+
+            .mainleft li {
+                margin: 10px auto;
+            }
+
+            .infleft p {
+                font-size: 15px;
+            }
+
+            .dot {
+                font-size: 15px;
+            }
+
+            .dots {
+                font-size: 15px;
+            }
+
+            .mainleft {
+                font-size: 12px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 530;
+            }
+
+            .mainleftpadding {
+                font-size: 15px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 0px 0;
+                font-size: 25px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .infimg {
+                width: 180px;
+                margin: 20px 0px 10px 40px;
+                box-shadow: 10px 10px 30px black;
+            }
+
+            .contactimg {
+                display: none;
+            }
+
+            .doctername {
+                display: none;
+            }
+
+            .button {
+                width: 80px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgba(2, 116, 216, 0.949);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 0 20px 0;
+                border: none;
+            }
+
+            .button:hover {
+                width: 80px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgb(1, 179, 255);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 0 20px 0;
+            }
+
+            .button img {
+                width: 10px;
+                padding: 4px 0 0 0;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 15px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 15px;
+            }
+
+            .only_hover:hover {
+                color: chartreuse;
+                text-decoration: underline;
+                text-shadow: 1px 1px 10px blueviolet;
+            }
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 2px 1.5px rgba(0, 255, 255, 0.53);
+            }
+
+            .right ul li {
+                padding: 0 15px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+
+        }
+
+        @media screen and (max-width : 450px) {
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 12px;
+            }
+
+            .mainleft li {
+                margin: 7px auto;
+            }
+
+            .infleft p {
+                font-size: 14px;
+            }
+
+            .dot {
+                font-size: 14px;
+            }
+
+            .dots {
+                font-size: 14px;
+            }
+
+            .mainleft {
+                font-size: 12px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 510;
+            }
+
+            .mainleftpadding {
+                font-size: 12px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 5px 0;
+                font-size: 25px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .infimg {
+                width: 160px;
+                margin: 5px 0px 10px 30px;
+                box-shadow: 10px 10px 30px black;
+            }
+
+            .contactimg {
+                display: none;
+            }
+
+            .doctername {
+                display: none;
+            }
+
+            .button {
+                width: 70px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgba(2, 116, 216, 0.949);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 0 20px 0;
+                border: none;
+            }
+
+            .button:hover {
+                width: 70px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgb(1, 179, 255);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 0 20px 0;
+            }
+
+            .button img {
+                width: 10px;
+                padding: 4px 0 0 0;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 14px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 14px;
+            }
+
+            .only_hover:hover {
+                color: chartreuse;
+                text-decoration: underline;
+                text-shadow: 1px 1px 10px blueviolet;
+            }
+
+            .left ul li img {
+                width: 40px;
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 2px 1.5px rgba(0, 255, 255, 0.53);
+            }
+
+            .right ul li {
+                padding: 0 10px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (max-width : 390px) {
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 12px;
+            }
+
+            .mainleft li {
+                margin: 4px auto;
+            }
+
+            .infleft p {
+                font-size: 14px;
+            }
+
+            .dot {
+                font-size: 14px;
+            }
+
+            .dots {
+                font-size: 14px;
+            }
+
+            .mainleft {
+                font-size: 12px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 510;
+            }
+
+            .mainleftpadding {
+                font-size: 12px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 5px 0;
+                font-size: 25px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .infimg {
+                width: 160px;
+                margin: 5px 0px 10px 30px;
+                box-shadow: 10px 10px 30px black;
+            }
+
+            .contactimg {
+                display: none;
+            }
+
+            .doctername {
+                display: none;
+            }
+
+            .button {
+                width: 80px;
+                padding: 1px 0px 5px 0px;
+                margin: 3px;
+                background-color: rgba(2, 116, 216, 0.949);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 10px 20px 10px;
+                border: none;
+            }
+
+            .button:hover {
+                width: 80px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgb(1, 179, 255);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 10px 20px 10px;
+            }
+
+            .branches ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+            }
+
+            .button img {
+                width: 10px;
+                padding: 4px 0 0 0;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 14px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 14px;
+            }
+
+            .only_hover:hover {
+                color: chartreuse;
+                text-decoration: underline;
+                text-shadow: 1px 1px 10px blueviolet;
+            }
+
+            .left ul li img {
+                width: 40px;
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 2px 1.5px rgba(0, 255, 255, 0.53);
+            }
+
+            .right ul li {
+                padding: 0 10px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+
+            .contactlogo {
+                display: flex;
+            }
+
+            .contactlogo li:hover {
+                background-color: rgba(127, 255, 212, 0.44);
+                border-radius: 15px;
+                text-shadow: 1px 1px 0.8px red;
+            }
+
+            .aligncenter {
+                color: blue;
+                text-align: center;
+            }
+
+            .mainleft li {
+                margin: 10px auto;
+            }
+        }
+
+        @media screen and (max-width : 365px) {
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 12px;
+            }
+
+            .mainleft li {
+                margin: 4px auto;
+            }
+
+            .infleft p {
+                font-size: 14px;
+            }
+
+            .dot {
+                font-size: 14px;
+            }
+
+            .dots {
+                font-size: 14px;
+            }
+
+            .mainleft {
+                font-size: 12px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 510;
+            }
+
+            .mainleftpadding {
+                font-size: 12px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 5px 0;
+                font-size: 25px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .infimg {
+                width: 160px;
+                margin: 5px 0px 10px 30px;
+                box-shadow: 10px 10px 30px black;
+            }
+
+            .contactimg {
+                display: none;
+            }
+
+            .doctername {
+                display: none;
+            }
+
+            .button {
+                width: 80px;
+                padding: 1px 0px 5px 0px;
+                margin: 3px;
+                background-color: rgba(2, 116, 216, 0.949);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 10px 20px 10px;
+                border: none;
+            }
+
+            .button:hover {
+                width: 80px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgb(1, 179, 255);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 10px 20px 10px;
+            }
+
+            .branches ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+            }
+
+            .button img {
+                width: 10px;
+                padding: 4px 0 0 0;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 12px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 12px;
+            }
+
+            .only_hover:hover {
+                color: chartreuse;
+                text-decoration: underline;
+                text-shadow: 1px 1px 10px blueviolet;
+            }
+
+            .left ul li img {
+                width: 35px;
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 2px 1.5px rgba(0, 255, 255, 0.53);
+            }
+
+            .right ul li {
+                padding: 0 8px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+
+            .contactlogo {
+                display: flex;
+            }
+
+            .contactlogo li:hover {
+                background-color: rgba(127, 255, 212, 0.44);
+                border-radius: 15px;
+                text-shadow: 1px 1px 0.8px red;
+            }
+
+            .aligncenter {
+                color: blue;
+                text-align: center;
+            }
+
+            .mainleft li {
+                margin: 10px auto;
+            }
+        }
+
+        @media screen and (max-width : 300px) {
+            strong {
+                font-family: 'Libre Baskerville', serif;
+                font-size: 11px;
+            }
+
+            .mainleft li {
+                margin: 4px auto;
+            }
+
+            .infleft p {
+                font-size: 14px;
+            }
+
+            .dot {
+                font-size: 14px;
+            }
+
+            .dots {
+                font-size: 14px;
+            }
+
+            .mainleft {
+                font-size: 12px;
+                font-family: 'Comic Neue', cursive;
+                font-weight: 510;
+            }
+
+            .mainleftpadding {
+                font-size: 12px;
+            }
+
+            .punebranch {
+                text-align: center;
+                padding: 30px 0 5px 0;
+                font-size: 22px;
+                font-weight: 600;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 15px;
+            }
+
+            .infimg {
+                width: 160px;
+                margin: 5px 0px 10px 30px;
+                box-shadow: 10px 10px 30px black;
+            }
+
+            .contactimg {
+                display: none;
+            }
+
+            .doctername {
+                display: none;
+            }
+
+            .button {
+                width: 80px;
+                padding: 1px 0px 5px 0px;
+                margin: 3px;
+                background-color: rgba(2, 116, 216, 0.949);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 10px 20px 10px;
+                border: none;
+            }
+
+            .button:hover {
+                width: 80px;
+                padding: 1px 0 5px 0;
+                margin: 3px;
+                background-color: rgb(1, 179, 255);
+                color: white;
+                border-radius: 5px;
+                font-size: 10px;
+                margin: 0 10px 20px 10px;
+            }
+
+            .branches ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+            }
+
+            .button img {
+                width: 10px;
+                padding: 4px 0 0 0;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 12px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 12px;
+            }
+
+            .only_hover:hover {
+                color: chartreuse;
+                text-decoration: underline;
+                text-shadow: 1px 1px 10px blueviolet;
+            }
+
+            .left ul li img {
+                width: 30px;
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 2px 1.5px rgba(0, 255, 255, 0.53);
+            }
+
+            .right ul li {
+                padding: 0 4px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+
+            .contactlogo {
+                display: flex;
+            }
+
+            .contactlogo li:hover {
+                background-color: rgba(127, 255, 212, 0.44);
+                border-radius: 15px;
+                text-shadow: 1px 1px 0.8px red;
+            }
+
+            .aligncenter {
+                color: blue;
+                text-align: center;
+            }
+
+            .mainleft li {
+                margin: 10px auto;
+            }
+
+            .left ul li {
+                padding: 0 2px;
+                font-family: 'Pacifico', cursive;
+                list-style: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="img/logo_of_vision4.png" alt="logo_of_vision" width="50px">
+                </li>
+                <li class="logo_name">
+                    VISION
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li class="only_hover"><a href="index.html">HOME</a></li>
+                <li class="only_hover"><a href="about.html">ABOUT</a> </li>
+                <li class="only_hover"><a href="contact.html"> CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="punebranch">Pune's Branch</div>
+        <div class="contact">
+            <div class="mainleft">
+                <ul>
+                    <li>
+                        <p class="mainleftpadding"> <strong>ADDRESS :- </strong>Vision clinic, near shanivarwada,
+                            Shivajinagar, Pune. <br>Pin code - 411011 <a class="bluelink"
+                                href="https://www.google.com/maps/d/viewer?ie=UTF8&oe=UTF8&msa=0&mid=1O6A_-vJ4UQ50GQi6Ut67qfbe7iY&ll=18.523044443476653%2C73.83955055738616&z=14"
+                                target="_blank">See
+                                on map</a></p>
+                    </li>
+                    <li>
+                        <p class="mainleftpadding"> <strong>TIMING :- </strong>9:00 AM to 5:00 PM </p>
+                    </li>
+                    <li>
+                        <p class="mainleftpadding"> <strong>TIMING'S ON SUNDAY AND HOLIDAY :- </strong> 8:00 AM to 12:00
+                            PM
+                        </p>
+                    </li>
+                    <li>
+                        <p class="mainleftpadding"><strong>CONTACT US :- </strong> <br>
+                        <ul class="contactlogo">
+                            <li><a href="tel:1234567890">
+                                    <p class="aligncenter1"><img src="img/call_FILL0_wght400_GRAD0_opsz48.png"
+                                            alt="call" width="35px"></p>
+                                    <p class="aligncenter1">+91 1234567890</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:">
+                                    <p class="aligncenter1"><img src="img/mail_FILL0_wght400_GRAD0_opsz48.png"
+                                            alt="mail"></P>
+                                    <p class="aligncenter"> xyz@gmail.com</p>
+                                </a>
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <ul class="about">
+                            <li><strong>About Doctor</strong></li>
+                            <li><strong>Name :- </strong>ROHIT KOHLI.</li>
+                            <li><strong>Education :- </strong>MBBS, MS. (John Hopkins)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="mainright">
+                <ul>
+                    <li><img src="img/doctor1.jpg" alt="" class="contactimg"></li>
+                    <li>
+                        <h2 class="doctername">
+                            <center>Dr. Rohit Kohli</center>
+                        </h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="branches">
+            <h2 class="bheading">
+                <center>Other branches of vision clinic</center>
+            </h2>
+            <ul>
+                <li><button class="button">
+                        <a href="https://www.google.com/maps/d/u/0/viewer?msa=0&ie=UTF8&t=h&vpsrc=6&ll=18.47960880116624%2C73.96820052734378&spn=11.50114%2C21.621094&z=8&source=embed&mid=1DfFcv3jAM8NAeioBjW_CHwtKL3A"
+                            target="_blank"><img src="img/location_on_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            Mumbai</a></button></li>
+                <li><button class="button">
+                        <a href="https://www.google.com/maps/d/viewer?mid=1IEVwjHNKZcYI5LKHZfRSFXEKyzg&hl=en_US&ll=28.536795394594403%2C77.15845149999998&z=11"
+                            target="_blank"><img src="img/location_on_FILL0_wght400_GRAD0_opsz48.png" alt=""> New
+                            Delhi</a></button>
+                </li>
+                <li><button class="button">
+                        <a href="http://https://www.google.com/maps/place/Kolkata,+West+Bengal/@22.855105,88.2360054,8.82z/data=!4m5!3m4!1s0x39f882db4908f667:0x43e330e68f6c2cbc!8m2!3d22.572646!4d88.363895"
+                            target="_blank"><img src="img/location_on_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            Kolkata</a></button></li>
+                <li><button class="button"><a
+                            href="http://https://www.google.com/maps/d/viewer?mid=1FxQqnwJRbe3mmjzKpsKRv06O5ik&hl=en&ll=12.902892971286933%2C80.27656118606143&z=9"
+                            target="_blank"><img src="img/location_on_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            Chennai</a></button></li>
+                <li><button class="button"><a
+                            href="http://https://www.google.com/maps/d/viewer?mid=1r6vDdBdPn1j8kIdcXsOgTjuo5ts&hl=en_US&ll=21.15103273513377%2C72.78731549999999&z=13"
+                            target="_blank"><img src="img/location_on_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            Surat</a></button></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="inf">
+            <div class="infleft">
+                <h1>Diagnosis of Color blindness</h1>
+                <p>If you have trouble seeing certain colors, your eye doctor can test to see if you have a color
+                    deficiency. You'll likely be given a thorough eye exam and shown specially designed pictures
+                    made of
+                    colored dots that have numbers or shapes in a different color hidden in them. <br>
+
+                    If you have a color vision deficiency, you'll find it difficult or impossible to see some of the
+                    patterns in the dots</p>
+            </div>
+            <div class="right">
+                <img src="img/checking.jpg" alt="image" class="infimg">
+            </div>
+        </div>
+        <hr>
+        <div class="inf">
+            <div class="infleft">
+                <h1>What's the treatment for color blindness?</h1>
+                <p class="decoration">There’s no cure for color blindness that’s passed down in families, but most
+                    people
+                    find
+                    ways to adjust to
+                    it. Children with color blindness may need help with some classroom activities, and adults with
+                    color
+                    blindness may not be able to do certain jobs, like being a pilot or graphic designer. Keep in
+                    mind that
+                    most
+                    of the time, color blindness doesn’t cause serious problems. <br>
+
+                    If your color blindness is happening because of another health problem, your doctor will treat
+                    the
+                    condition
+                    that’s causing the problem. If you’re taking a medicine that causes color blindness, your doctor
+                    may
+                    adjust
+                    how much you take or suggest you switch to a different medicine. <br>
+
+                    If color blindness is causing problems with everyday tasks, there are devices and technology
+                    that can
+                    help,
+                    including: <br>
+                <ul class="dot">
+                    <li> <strong> Glasses and contacts:</strong> Special contact lenses and glasses may help people
+                        who are
+                        color blind tell the difference between colors</li>
+
+                    <li><strong> Visual aids:</strong> You can use visual aids, apps, and other technology to help
+                        you live
+                        with
+                        color blindness. For example, you can use an app to take a photo with your phone or tablet
+                        and then
+                        tap
+                        on part of the photo to find out the color of that area.</li>
+                    <li><strong> Clean your EYES:</strong> Clean your eyes with cold water at least 4 times in a day</li>
+                    <li><strong> Eat vegetables:</strong> Eat green vegetables with rich protiens and nutrients</li>
+                </ul>
+                </p>
+
+            </div>
+            <div class="infright">
+                <img src="img/medecine2.jpg" alt="image" class="infimg">
+                <img src="img/lences.jpg" alt="image" class="infimg">
+            </div>
+        </div>
+        </div>
+        <div class="infleft">
+            <p class="decoration">
+                Talk over your options with your eye doctor. Remember these tips: <br>
+            <ul class="dots">
+                <li>Ask your doctor about visual aids and technology that can help you with everyday tasks</li>
+                <li>Encourage family members to get checked for color blindness, since it can run in families
+                </li>
+            </ul>
+            </p>
+    </main>
+    <footer>
+        <center class="forpadding">&copy;VISION_CLINIC</center>
+    </footer>
+</body>
+
+</html>

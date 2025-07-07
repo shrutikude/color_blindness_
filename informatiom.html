@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION</title>
+    <link rel="icon" href="img/logo_of_vision4.png" style="border: 0.2px solid red;">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter:wght@500&family=Lora:ital@1&family=Pacifico&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            background-color: rgba(241, 240, 240, 0.727);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.29);
+            color: white;
+        }
+
+        .logo_name {
+            color: aqua;
+            text-shadow: 1px 1px 30px aqua;
+        }
+
+        .only_hover {
+            color: black;
+            font-size: large;
+        }
+
+        .only_hover:hover {
+            color: chartreuse;
+            text-decoration: underline;
+            text-shadow: 1px 1px 10px blueviolet;
+        }
+
+        .left ul li img {
+            padding-top: 3px;
+            border-radius: 100%;
+            margin: 5px;
+            box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+            width: 50px;
+        }
+
+        .left ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-content: space-around;
+        }
+
+        .right ul li {
+            padding: 0 20px;
+            font-family: 'Comic Neue', cursive;
+            list-style: none;
+            color: white;
+        }
+
+        .left ul li {
+            padding: 0 5px;
+            font-family: 'Pacifico', cursive;
+            list-style: none;
+        }
+
+        h1 {
+            padding: 15px 10px 10px 15px;
+        }
+
+        .decoration {
+            padding: 10px 10px 10px 10px;
+            font-size: 20px;
+        }
+
+        .dot {
+            list-style: inside;
+            padding-left: 30px;
+            font-size: 20px;
+        }
+
+        .dots {
+            list-style: square;
+            padding-left: 30px;
+        }
+
+        body {
+            background-image: url(img/body_background.webp);
+            background-size: cover;
+            background-position: center;
+        }
+
+        footer {
+            background-color: rgba(137, 43, 226, 0.46);
+            height: 30px;
+            color: white;
+        }
+
+        footer:hover {
+            background-color: rgba(137, 43, 226, 0.46);
+            height: 30px;
+            color: aqua;
+        }
+
+        .forpadding {
+            padding: 5.5px;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: chartreuse;
+        }
+
+        /* selected link */
+        a:active {
+            color: yellow;
+        }
+
+        .inf {
+            display: flex;
+        }
+
+        .infleft {
+            padding: 20px;
+        }
+
+        .infright {
+            padding: 10px 50px 10px 10px;
+        }
+
+        .infright img {
+            width: 300px;
+            box-shadow: 10px 10px 30px black;
+        }
+
+        .lastq img {
+            width: 300px;
+            box-shadow: 10px 10px 30px black;
+            margin: 10px 20px 30px 20px;
+        }
+
+        @media screen and (max-width:900px) {
+            .infright img {
+                width: 250px;
+                box-shadow: 10px 10px 30px black;
+                margin-top: 30px;
+            }
+
+            .lastq img {
+                width: 250px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 20px 30px 20px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 18px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 30px;
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width:750px) {
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .infright img {
+                width: 250px;
+                box-shadow: 10px 10px 30px black;
+                margin: 0 0 20px 40px;
+            }
+
+            .lastq img {
+                width: 250px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 20px 30px 20px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 18px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 30px;
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width:550px) {
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .infright img {
+                width: 230px;
+                box-shadow: 10px 10px 30px black;
+                margin: 0 0 20px 40px;
+            }
+
+            .lastq img {
+                width: 210px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 10px 20px 60px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 17px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 30px;
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: large;
+            }
+
+            .right ul li {
+                padding: 0 15px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .infright img {
+                width: 220px;
+                box-shadow: 10px 10px 30px black;
+                margin: 0 0 20px 40px;
+            }
+
+            .lastq img {
+                width: 210px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 10px 20px 60px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 16px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 30px;
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 16px;
+            }
+
+            .right ul li {
+                padding: 0 10px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .infright img {
+                width: 200px;
+                box-shadow: 10px 10px 30px black;
+                margin: 0 0 20px 40px;
+            }
+
+            .lastq img {
+                width: 200px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 10px 20px 60px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 16px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 20px;
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 14px;
+            }
+
+            .right ul li {
+                padding: 0 10px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 13px;
+            }
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 4px;
+                box-shadow: 2px 1.2px rgba(0, 255, 255, 0.53);
+                width: 40px;
+            }
+        }
+
+        @media screen and (max-width:350px) {
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .infright img {
+                width: 190px;
+                box-shadow: 10px 10px 30px black;
+                margin: 0 0 20px 40px;
+            }
+
+            .lastq img {
+                width: 200px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 10px 20px 60px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 16px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 20px;
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 25px;
+                padding: 10px 5px 5px 5px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 12px;
+            }
+
+            .right ul li {
+                padding: 0 7px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 12px;
+            }
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 4px;
+                box-shadow: 2px 1.2px rgba(0, 255, 255, 0.53);
+                width: 35px;
+            }
+
+            .decoration {
+                padding: 10px 10px 0px 0px;
+            }
+        }
+
+        @media screen and (max-width:310px) {
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .infright img {
+                width: 190px;
+                box-shadow: 10px 10px 30px black;
+                margin: 0 0 15px 20px;
+            }
+
+            .lastq img {
+                width: 200px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 10px 20px 40px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 16px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 20px;
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 23px;
+                padding: 10px 5px 5px 5px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 12px;
+            }
+
+            .right ul li {
+                padding: 0 7px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 12px;
+            }
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 4px;
+                box-shadow: 2px 1.2px rgba(0, 255, 255, 0.53);
+                width: 35px;
+            }
+
+            .decoration {
+                padding: 10px 10px 0px 0px;
+            }
+        }
+
+        @media screen and (max-width:290px) {
+            .inf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .infright img {
+                width: 160px;
+                box-shadow: 10px 10px 30px black;
+                margin: 0 0 15px 20px;
+            }
+
+            .lastq img {
+                width: 160px;
+                box-shadow: 10px 10px 30px black;
+                margin: 10px 10px 20px 40px;
+            }
+
+            .decoration {
+                padding: 10px 10px 10px 10px;
+                font-size: 14px;
+            }
+
+            .dot {
+                list-style: inside;
+                padding-left: 10px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 21px;
+                padding: 10px 5px 5px 5px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 12px;
+            }
+
+            .right ul li {
+                padding: 0 4px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+            }
+
+           
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 10px;
+            }
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 3px 0 3px 3px;
+                box-shadow: 1.7px 1.2px rgba(0, 255, 255, 0.53);
+                width: 27px;
+            }
+
+            .decoration {
+                padding: 10px 10px 0px 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="img/logo_of_vision4.png" alt="logo_of_vision">
+                </li>
+                <li class="logo_name">
+                    VISION
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li class="only_hover"><a href="index.html">HOME</a></li>
+                <li class="only_hover"><a href="about.html">ABOUT</a> </li>
+                <li class="only_hover"><a href="contact.html"> CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <hr>
+        <div class="inf">
+            <div class="infleft">
+                <h1>What is color blindness?</h1>
+                <p class="decoration">If you have color blindness, it means you see colors differently than most people.
+                    Most of
+                    the time, color
+                    blindness makes it hard to tell the difference between certain colors. <br>
+                    Usually, color blindness runs in families. There’s no cure, but special glasses and contact lenses
+                    can help.
+                    Most people who are color blind are able to adjust and don’t have problems with everyday activities.
+                    <a href="https://en.wikipedia.org/wiki/Color_blindness"
+                        style="color: rgb(0, 123, 255); text-decoration:underline ;" target="_blank">more</a>
+                </p>
+            </div>
+            <div class="infright"><img src="img/whatiscolorblindness.jpg" alt="."></div>
+        </div>
+        <hr>
+
+        <div class="inf">
+            <div class="infleft">
+                <h1>What are the symptoms of color blindness?</h1>
+                <p class="decoration">The main symptom of color blindness is not seeing colors the way most people do.
+                    If you’re
+                    color blind, you
+                    may have trouble seeing: </p>
+                <ul class="dot">
+                    <li>The difference between colors</li>
+                    <li>How bright colors are</li>
+                    <li>Different shades of colors</li>
+                </ul>
+                <p class="decoration">
+                    Symptoms of color blindness are often so mild that you may not notice them. And since we get used to
+                    the way
+                    we see colors, many people with color blindness don’t know they have it. <br>
+                    People with very serious cases of color blindness might have other symptoms, too — like quick
+                    side-to-side
+                    eye movements (nystagmus) or sensitivity to light.<a
+                        href="https://en.wikipedia.org/wiki/Color_blindness"
+                        style="color: rgb(0, 123, 255); text-decoration:underline ;" target="_blank">more</a> <br>
+                </p>
+            </div>
+            <div class="infright"><img src="img/symptance.jpg" alt=""> </div>
+        </div>
+        <hr>
+        <div class="inf">
+            <div class="infleft">
+                <h1>Am I at risk for color blindness?</h1>
+                <p class="decoration">Men have a much higher risk than women for color blindness. But this is not
+                    necessary. You’re also more
+                    likely to
+                    have color blindness
+                    if you:</p>
+                <ul class="dot">
+                    <li>Have a family history of color blindness</li>
+                    <li>Have certain eye diseases, like glaucoma or age-related macular degeneration (AMD)</li>
+                    <li>Have certain health problems, like diabetes, Alzheimer’s disease, or multiple sclerosis (MS)
+                    </li>
+                    <li>Take certain medicines</li>
+                    <li>Are white</li>
+                </ul>
+                <p class="decoration">If you think you may have color blindness, talk with your doctor about getting
+                    checked.<a href="https://en.wikipedia.org/wiki/Color_blindness"
+                        style="color: rgb(0, 123, 255); text-decoration:underline ;" target="_blank">more</a>
+                </p>
+            </div>
+            <div class="infright"><img src="img/riskof1.jpg" alt=""></div>
+        </div>
+        <hr>
+        <div class="infleft">
+            <h1>What causes color blindness?</h1>
+            <p class="decoration">The most common kinds of color blindness are genetic, meaning they’re passed down from
+                parents. <br>
+
+                Color blindness can also happen because of damage to your eye or your brain. And color vision may get
+                worse
+                as you get older — often because of cataracts (cloudy areas in the lens of the eye).<a
+                    href="https://en.wikipedia.org/wiki/Color_blindness"
+                    style="color: rgb(0, 123, 255); text-decoration:underline ;" target="_blank">more</a></p>
+        </div>
+        <hr>
+        <div class="inf">
+            <div class="infleft">
+                <h1>How can I find out if I have color blindness?</h1>
+                <div class="decoration">Your eye doctor can usually use a simple test to tell you if you’re color
+                    blind. <br>
+                    <br>
+                    During the test, your eye doctor will show you a circle made of many different colored dots. The
+                    circle has
+                    a shape inside it that’s made out of dots — like a number, a letter, or a squiggly line. This shape
+                    is easy
+                    to see if you don’t have color blindness, but people who are color blind have a hard time seeing
+                    it<a href="https://en.wikipedia.org/wiki/Color_blindness"
+                        style="color: rgb(0, 123, 255); text-decoration:underline ;" target="_blank">more</a></p>
+                </div>
+            </div>
+
+            <div class="infright"><img src="img/riskof.jpg" alt=""></div>
+        </div>
+        </div>
+        <hr>
+        <div class="inf">
+            <div class="infleft">
+                <h1>Two Main Types of Color Blindness :-</h1>
+                <p class="decoration"> With the most common kind of colorblindness, you can’t tell the difference
+                    between
+                    some
+                    shades of red and green. Other people have a type that makes you confuse certain shades of blue and
+                    yellow.
+                    Either one can be mild, moderate, or severe.</p>
+            </div>
+            <div class="infright"><img src="img/typesof.jpg" alt=""></div>
+        </div>
+        <hr>
+        <div class="inf">
+            <div class="infleft">
+                <h1>How Colorblindness Happens</h1>
+                <p class="decoration">If you’re colorblind, that means there's a problem with at least one kind of cone.
+                    Those
+                    cones could be missing, or they might pick up a different color than they should. For instance, some
+                    cones
+                    could have defective genteic coding for specific color sensitive chemicals. Either way, they can’t
+                    send
+                    your
+                    brain the right information. Since the cones also help you see the fine details of what you’re
+                    looking
+                    at,
+                    colorblindness might also make you see a little less sharply.</p>
+            </div>
+        </div>
+        <div class="lastq">
+            <img src="img/happens.jpg" alt="">
+            <img src="img/happens2.jpg" alt="">
+        </div>
+    </main>
+    <footer>
+        <center class="forpadding">&copy;VISION_CLINIC</center>
+    </footer>
+</body>
+
+</html>

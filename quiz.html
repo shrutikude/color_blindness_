@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION</title>
+    <link rel="icon" href="img/logo_of_vision4.png" style="border: 0.2px solid red;">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter:wght@500&family=Lora:ital@1&family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.29);
+            color: white;
+        }
+
+        .logo_name {
+            color: aqua;
+            text-shadow: 1px 1px 30px aqua;
+        }
+
+        .only_hover {
+            color: black;
+            font-size: large;
+        }
+
+        .only_hover:hover {
+            color: chartreuse;
+            text-decoration: underline;
+            text-shadow: 1px 1px 10px blueviolet;
+        }
+
+        .left ul li img {
+            padding-top: 3px;
+            border-radius: 100%;
+            margin: 5px;
+            box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+            width: 50px;
+        }
+
+        .left ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-content: space-around;
+        }
+
+        .right ul li {
+            padding: 0 20px;
+            font-family: 'Comic Neue', cursive;
+            list-style: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        .left ul li {
+            padding: 0 5px;
+            font-family: 'Pacifico', cursive;
+            list-style: none;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        nav a:visited {
+            color: white;
+        }
+
+        /* mouse over link */
+        nav a:hover {
+            color: chartreuse;
+        }
+
+        /* selected link */
+        nav a:active {
+            color: yellow;
+        }
+
+        .question {
+            text-align: center;
+            padding: 30px 0 0 0;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: 'Libre Baskerville', serif;
+            text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+        }
+
+        body {
+            background-image: url(img/body_background.webp);
+            background-size: cover;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            background-attachment: fixed;
+        }
+
+        .container img {
+            width: 200px;
+            display: grid;
+            margin: 30px 30px 25px 30px;
+            border-radius: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            border: 1px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: space-around;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            background-color: rgba(0, 0, 0, 0.43);
+            border-radius: 10px;
+        }
+
+        .form {
+            padding: 0 0 1.50px 0;
+        }
+
+        .InputNo {
+            width: 140px;
+            height: 24px;
+            background-color: rgba(255, 255, 255, 0.929);
+            border: 0.50px solid black;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .InputNo:hover {
+            width: 140px;
+            height: 24px;
+            background-color: rgb(255, 255, 255);
+            border: 0.50px solid black;
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: rgb(1, 1, 1);
+            opacity: 1;
+            /* Firefox */
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: red;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: red;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        /* .submit {
+            height: 27px;
+            width: 56px;
+            border-radius: 5px;
+        }
+
+        .submit:hover {
+            height: 27px;
+            width: 56px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(88, 230, 88);
+        } */
+
+        main {
+            background-color: rgba(255, 255, 255, 0.404);
+            /* height: 100%; */
+        }
+
+        .main {
+            padding: 30px 130px 30px 130px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .submitbg {
+            background-color: rgba(255, 255, 255, 0.404);
+            text-align: center;
+            padding: 0 0 30px 0;
+        }
+
+        .submit {
+            justify-content: center;
+
+            height: 30px;
+            width: 90px;
+            font-family: 'Libre Baskerville', serif;
+            border-radius: 10px;
+            border: 0.5px solid rgb(127, 18, 236);
+        }
+
+        .submit:hover {
+            height: 30px;
+            width: 90px;
+            font-family: 'Libre Baskerville', serif;
+            border-radius: 10px;
+            border: 0.5px solid rgba(255, 255, 255, 0.366);
+            background: rgb(76, 197, 76);
+        }
+
+        footer {
+            background-color: rgba(137, 43, 226, 0.46);
+            height: 30px;
+            color: white;
+            padding-top: 10px;
+        }
+
+        footer:hover {
+            background-color: rgba(137, 43, 226, 0.46);
+            height: 30px;
+            color: aqua;
+        }
+
+        @media screen and (max-width:1230px) {
+            .container img {
+                width: 180px;
+                display: grid;
+                margin: 30px 30px 25px 30px;
+                border-radius: 20px;
+            }
+        }
+
+        @media screen and (max-width:1230px) {
+            .container img {
+                width: 160px;
+                display: grid;
+                margin: 30px 30px 25px 30px;
+                border-radius: 20px;
+            }
+        }
+
+        @media screen and (max-width:1180px) {
+            .container img {
+                width: 160px;
+                display: grid;
+                margin: 25px 25px 25px 25px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 30px 100px 30px 100px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width:1115px) {
+            .container img {
+                width: 160px;
+                display: grid;
+                margin: 25px 25px 25px 25px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 30px 50px 30px 50px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width:920px) {
+            .container img {
+                width: 160px;
+                display: grid;
+                margin: 25px 25px 25px 25px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 30px 20px 30px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 35px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:790px) {
+            .container img {
+                width: 180px;
+                display: grid;
+                margin: 30px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 30px 20px 30px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 35px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            .container img {
+                width: 180px;
+                display: grid;
+                margin: 30px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 30px 20px 30px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 30px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:645px) {
+            .container img {
+                width: 160px;
+                display: grid;
+                margin: 30px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 30px 20px 30px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 30px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:605px) {
+            .container img {
+                width: 160px;
+                display: grid;
+                margin: 20px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 30px 20px 30px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 20px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:570px) {
+            .container img {
+                width: 140px;
+                display: grid;
+                margin: 20px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 20px 30px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 20px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:521px) {
+            .container img {
+                width: 140px;
+                display: grid;
+                margin: 20px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 20px 30px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 20px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 15px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:471px) {
+            .container img {
+                width: 120px;
+                display: grid;
+                margin: 20px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 10px 30px 10px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 20px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 15px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+
+            .InputNo {
+                width: 110px;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0.841);
+                border: 0.50px solid black;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                font-size: 10px;
+            }
+
+            .InputNo:hover {
+                width: 110px;
+                height: 20px;
+                background-color: rgb(255, 255, 255);
+                border: 0.50px solid black;
+                font-size: 10px;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 15px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 16px;
+            }
+
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+                width: 40px;
+            }
+
+            .right ul li {
+                padding: 0 20px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+
+        }
+
+        @media screen and (max-width:435px) {
+            .container img {
+                width: 120px;
+                display: grid;
+                margin: 20px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 5px 30px 5px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 20px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 15px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+
+            .InputNo {
+                width: 110px;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0.841);
+                border: 0.50px solid black;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                font-size: 10px;
+            }
+
+            .InputNo:hover {
+                width: 110px;
+                height: 20px;
+                background-color: rgb(255, 255, 255);
+                border: 0.50px solid black;
+                font-size: 10px;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 15px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 16px;
+            }
+
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+                width: 40px;
+            }
+
+            .right ul li {
+                padding: 0 15px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+
+        }
+
+        @media screen and (max-width:414px) {
+            .container img {
+                width: 110px;
+                display: grid;
+                margin: 15px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 5px 30px 5px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 18px;
+                font-weight: 550;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+
+            .InputNo {
+                width: 100px;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0.841);
+                border: 0.50px solid black;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                font-size: 9px;
+            }
+
+            .InputNo:hover {
+                width: 100px;
+                height: 20px;
+                background-color: rgb(255, 255, 255);
+                border: 0.50px solid black;
+                font-size: 9px;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 14px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 14px;
+            }
+
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+                width: 37px;
+            }
+
+            .right ul li {
+                padding: 0 10px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+
+        }
+
+        @media screen and (max-width:350px) {
+
+            .container img {
+                width: 110px;
+                display: grid;
+                margin: 15px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 5px 30px 5px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 16px;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+
+            .InputNo {
+                width: 100px;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0.841);
+                border: 0.50px solid black;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                font-size: 9px;
+            }
+
+            .InputNo:hover {
+                width: 100px;
+                height: 20px;
+                background-color: rgb(255, 255, 255);
+                border: 0.50px solid black;
+                font-size: 9px;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 13px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 13px;
+            }
+
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 5px;
+                box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+                width: 37px;
+            }
+
+            .right ul li {
+                padding: 0 10px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+        }
+
+
+        @media screen and (max-width:335px) {
+            .container img {
+                width: 100px;
+                display: grid;
+                margin: 10px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 3px 30px 3px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 30px 0 0 0;
+                font-size: 15px;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.458);
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 7px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+
+            .InputNo {
+                width: 80px;
+                height: 15px;
+                background-color: rgba(255, 255, 255, 0.841);
+                border: 0.50px solid black;
+                border-radius: 4px;
+                margin-bottom: 15px;
+                font-size: 7px;
+            }
+
+            .InputNo:hover {
+                width: 80px;
+                height: 15px;
+                background-color: rgb(255, 255, 255);
+                border: 0.50px solid black;
+                font-size: 9px;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 12px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 13px;
+            }
+
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 1px;
+                box-shadow: 3px 1.5px rgba(0, 255, 255, 0.53);
+                width: 34px;
+            }
+
+            .right ul li {
+                padding: 0 6px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (max-width:290px) {
+            .container img {
+                width: 90px;
+                display: grid;
+                margin: 10px;
+                border-radius: 20px;
+            }
+
+
+            .main {
+                padding: 20px 2px 30px 2px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .question {
+                text-align: center;
+                padding: 20px 2px 0 2px;
+                font-size: 15px;
+                font-family: 'Libre Baskerville', serif;
+                text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.458);
+                font-size: 13px;
+            }
+
+            .container {
+                max-width: 1000px;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                margin: 5px;
+                background-color: rgba(0, 0, 0, 0.43);
+                border-radius: 10px;
+            }
+
+            .InputNo {
+                width: 80px;
+                height: 15px;
+                background-color: rgba(255, 255, 255, 0.841);
+                border: 0.50px solid black;
+                border-radius: 4px;
+                margin-bottom: 15px;
+                font-size: 7px;
+            }
+
+            .InputNo:hover {
+                width: 80px;
+                height: 15px;
+                background-color: rgb(255, 255, 255);
+                border: 0.50px solid black;
+                font-size: 7px;
+            }
+
+            .logo_name {
+                color: aqua;
+                text-shadow: 1px 1px 30px aqua;
+                font-size: 10px;
+            }
+
+            .only_hover {
+                color: black;
+                font-size: 10px;
+            }
+
+
+            .left ul li img {
+                padding-top: 3px;
+                border-radius: 100%;
+                margin: 1px;
+                box-shadow: 2px 1.5px rgba(0, 255, 255, 0.53);
+                width: 30px;
+            }
+
+            .right ul li {
+                padding: 0 6px;
+                font-family: 'Comic Neue', cursive;
+                list-style: none;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="img/logo_of_vision4.png" alt="logo_of_vision">
+                </li>
+                <li class="logo_name">
+                    VISION
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li class="only_hover"><a href="index.html">HOME</a></li>
+                <li class="only_hover"><a href="about.html">ABOUT</a> </li>
+                <li class="only_hover"><a href="contact.html"> CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <p class="question"> Enter the number shown in image</p>
+        <div class="main">
+            <div class="container" id="a7">
+                <img src="img/colorblind-test-image1.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i7"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a6"><img src="img/colorblind-test-image2.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i6"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a26"><img src="img/colorblind-test-image3.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i26"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a15"><img src="img/colorblind-test-image4.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i15"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="aa6"><img src="img/colorblind-test-image5.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="ii6"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a73"><img src="img/colorblind-test-image6.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i73"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a5"><img src="img/colorblind-test-image7.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i5"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a16"><img src="img/colorblind-test-image8.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i16"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a45"><img src="img/colorblind-test-image9.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i45"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a12"><img src="img/colorblind-test-image10.webp" alt="">
+                <form action="" class="form"><input type="number" class="InputNo" id="i12"
+                        placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a29"><img src="img/colorblind-test-image11.webp" alt="">
+                <form action=""><input type="number" class="InputNo" id="i29" placeholder=" Enter above no.">
+                </form>
+            </div>
+            <div class="container" id="a8"><img src="img/colorblind-test-image12.webp" alt="">
+                <form action=""><input type="number" class="InputNo" id="i8" placeholder=" Enter above no.">
+                </form>
+            </div>
+        </div>
+    </main>
+    <center> <button onclick="check()" class="submit">SUBMIT</button></center>
+    <footer>
+        <center class="forpadding">&copy;VISION_CLINIC</center>
+    </footer>
+    <script src="quiz.js">
+    </script>
+</body>
+
+
+</html>
